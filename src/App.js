@@ -10,14 +10,14 @@ import UfoScene from './components/UfoScene';
 
 
 import {makeStyles} from '@material-ui/core/styles';
-import { SpeedDial, SpeedDialIcon, SpeedDialAction} from '@material-ui/lab';
+//import { SpeedDial, SpeedDialIcon, SpeedDialAction} from '@material-ui/lab';
 
-//Speed Dial Icons
+/* //Speed Dial Icons
 import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 import SaveIcon from '@material-ui/icons/Save';
 import PrintIcon from '@material-ui/icons/Print';
 import ShareIcon from '@material-ui/icons/Share';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@material-ui/icons/Favorite'; */
 
 import {Canvas} from "@react-three/fiber";
 
@@ -51,20 +51,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const actions = [
+/* const actions = [
   { icon: <FileCopyIcon />, name: 'Copy' },
   { icon: <SaveIcon />, name: 'Save' },
   { icon: <PrintIcon />, name: 'Print' },
   { icon: <ShareIcon />, name: 'Share' },
   { icon: <FavoriteIcon />, name: 'Like' },
-];
+]; */
 
 function App() {
   const classes = useStyles();
-    const [open, setOpen] = useState(false);
-    const [hidden, setHidden] = useState(false);
+/*     const [open, setOpen] = useState(false);
+    const [hidden, setHidden] = useState(false); */
 
-    const handleHiddenChange = (event) => {
+   /*  const handleHiddenChange = (event) => {
         setHidden(event.target.checked);
     };
 
@@ -74,10 +74,10 @@ function App() {
 
     const handleOpen = () => {
         setOpen(true);
-    };
+    }; */
 
 
-  let timerID = useRef(null);
+  //let timerID = useRef(null);
   const domContent = useRef();
   const scrollArea = useRef();
   const handleScroll = (e) =>(state.top.current = e.target.scrollTop)
