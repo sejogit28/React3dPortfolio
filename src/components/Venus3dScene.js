@@ -7,8 +7,8 @@ import
 from '@material-ui/core';
 
 import IconButton from '@material-ui/core/IconButton';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from '@material-ui/icons/Link';
 
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -144,7 +144,7 @@ const Venus3dScene = props =>
                                 component="img"
                                 image={projCard.imageSrc}
                                 height={325}
-                                /* width={100} */
+                               
                                 title={projCard.title}
                             />
                             <CardContent>
@@ -153,9 +153,19 @@ const Venus3dScene = props =>
                                 </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                                <IconButton aria-label="add to favorites">
-                                <FavoriteIcon />
+                                <Tooltip 
+                                interactive
+                                arrow 
+                                title='Live link coming soon' 
+                                TransitionComponent={Zoom}>
+                                <IconButton 
+                                className={classes.cardGitHubButtonColor} 
+                                href='#'
+                                aria-label="share"
+                                >
+                                    <LinkIcon fontSize="large" />
                                 </IconButton>
+                            </Tooltip>
                                 <Tooltip 
                                 interactive
                                 arrow 

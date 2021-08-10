@@ -10,7 +10,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import DescriptionIcon from '@material-ui/icons/Description';
+//import DescriptionIcon from '@material-ui/icons/Description';
 
 
 import {useFrame, useLoader} from "@react-three/fiber";
@@ -140,7 +140,7 @@ const Earth3dScene = props =>
                         </CardContent>
                     </CardActionArea>
                         <CardActions disableSpacing>
-                            <Tooltip 
+                           {/*  <Tooltip 
                                 interactive
                                 arrow 
                                 title='My Resume' 
@@ -148,7 +148,7 @@ const Earth3dScene = props =>
                                 <IconButton aria-label="share">
                                     <DescriptionIcon fontSize="large"  />
                                 </IconButton>
-                            </Tooltip>
+                            </Tooltip> */}
                             <Tooltip 
                                 interactive
                                 arrow 
