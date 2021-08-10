@@ -106,7 +106,7 @@ function App() {
             
           <div className={classes.domContentDiv} ref={domContent}/>
             <div 
-              style={{height: `${state.pages * dimensions.height}`}}
+              /* style={{height: `${state.pages * dimensions.height}`}} */
               className={classes.pageHeight} 
             />
       
