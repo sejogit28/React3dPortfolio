@@ -10,14 +10,7 @@ import UfoScene from './components/UfoScene';
 
 
 import {makeStyles} from '@material-ui/core/styles';
-//import { SpeedDial, SpeedDialIcon, SpeedDialAction} from '@material-ui/lab';
 
-/* //Speed Dial Icons
-import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
-import SaveIcon from '@material-ui/icons/Save';
-import PrintIcon from '@material-ui/icons/Print';
-import ShareIcon from '@material-ui/icons/Share';
-import FavoriteIcon from '@material-ui/icons/Favorite'; */
 
 import {Canvas} from "@react-three/fiber";
 
@@ -51,33 +44,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-/* const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-  { icon: <FavoriteIcon />, name: 'Like' },
-]; */
+
 
 function App() {
   const classes = useStyles();
-/*     const [open, setOpen] = useState(false);
-    const [hidden, setHidden] = useState(false); */
 
-   /*  const handleHiddenChange = (event) => {
-        setHidden(event.target.checked);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    const handleOpen = () => {
-        setOpen(true);
-    }; */
-
-
-  //let timerID = useRef(null);
   const domContent = useRef();
   const scrollArea = useRef();
   const handleScroll = (e) =>(state.top.current = e.target.scrollTop)
@@ -87,14 +58,14 @@ function App() {
     width: window.innerWidth
   })
 
-  useEffect(()=> void handleScroll({target: scrollArea.current}), [])
+  useEffect(()=> void handleScroll({target: scrollArea.current}), )
   useEffect(() => 
   {
     
     function handleResize()
     {
       setDimensions({
-        height: window.innerHeight,
+        height: window.outerHeight,
         width: window.innerWidth
       })
     
@@ -103,7 +74,7 @@ function App() {
       window.addEventListener('resize', handleResize)
     
     
-  }, [])
+  }, /* [dimensions.height, dimensions.width] */)
   
   return (
     <div className={classes.canvasContainer}>

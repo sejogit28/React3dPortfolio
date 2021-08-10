@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 
 import 
 {
-    Grid, Typography, Card, CardContent, CardMedia, CardActions
+    Grid, Typography, Card, CardContent, CardMedia, CardActions, Tooltip, Zoom
 } 
 from '@material-ui/core';
 
@@ -21,27 +21,32 @@ import {Section} from './Section';
 import SpaceXShipScene from './SpaceXShipScene';
 import MaintenanceRobotScene from './MaintenanceRobotScene';
 
+import projectCardListData from './ProjectCardListData';
+
 import Venus3dTexture from "../textures/8k_venus_surface.jpg";
 import VenusAtmosphereTexture from "../textures/4k_venus_atmosphere.jpg"
 const useStyles = makeStyles({
   
   whiteFont:
   {
-    color: "#f6f3ea"
+    color: "#f6f3ea",
+   /*  justifyItems: "center",
+    width: "60%",
+    maxWidth:"60%", */
   },
   htmlContainer:
   {
-    width: "65%",
-    maxWidth:"65%",
+    width: "80%",
+    maxWidth:"80%",
     height: "80%",
-    paddingLeft: "2em"
-    /* justifyItems: "center" */
+    paddingLeft: "3em" ,
+    /* justifyItems: "left"  */
   },
-  root: 
+  card: 
   {
-    maxHeight: "23em",
-    maxWidth: "15rem",
-    marginBottom: "3em"
+    maxHeight: "35em",
+    maxWidth: "32rem",
+    marginBottom: "5em"
   },
   
   title: {
@@ -53,7 +58,12 @@ const useStyles = makeStyles({
   avatar: {
     backgroundColor: "#000b01",
   },
-  cardButtonColor:
+ 
+  media:
+  {
+     maxWidth: "70rem"
+  },
+  cardGitHubButtonColor:
   {
       color: "#000000"
   }
@@ -116,104 +126,61 @@ const Venus3dScene = props =>
         <SpaceXShipScene/>
         <MaintenanceRobotScene/>
         <Html portal={props.domContent} fullscreen>
-            <Grid container alignItems="center"  justifyContent="space-evenly" className={classes.htmlContainer} >
+            <Grid container  alignItems="center"  justifyContent="space-evenly"  className={classes.htmlContainer} >
                 <Grid item xs={12}>
-                    <Typography align='center' gutterBottom className={classes.whiteFont} variant='h2'>
-                        My Projects
+                    <Typography align='left' gutterBottom className={classes.whiteFont} variant='h2'>
+                        My Projects:
                     </Typography>
                 </Grid>
-                <Grid container  justifyContent="space-evenly">
-
-                <Card className={classes.root}>
-                    {/* <CardHeader
-                        avatar={
-                        <Avatar aria-label="recipe" className={classes.avatar}>
-                            $
-                        </Avatar>
-                        }
-                        
-                        title=
-                        {
-                            <Typography variant='h6'>
-                                Expen$e Track
-                            </Typography>
-                            }
-                        subheader="May 9, 2021"
-                    /> */}
-                    <CardMedia
-                        className={classes.media}
-                        component="img"
-                        src={'https://media.giphy.com/media/YqnXaLTb68GAJ8ZHFR/giphy.gif'}
-                        height={200}
-                        title="Placeholder Gif"
-                    />
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            An expense tracker built with Blazor Web Assembly, .NET 5 Web Api, 
-                            and Microsoft SQL Server 
-                        </Typography>
-                    </CardContent>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                        <GitHubIcon />
-                        </IconButton>
-                        
-                    </CardActions>
-                </Card>
-                <Card className={classes.root}>
-                    <CardMedia
-                        className={classes.media}
-                        component="img"
-                        src={'https://media.giphy.com/media/YqnXaLTb68GAJ8ZHFR/giphy.gif'}
-                        height={200}
-                        title="Placeholder Gif"
-                    />
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            An expense tracker built with Blazor Web Assembly, .NET 5 Web Api, 
-                            and Microsoft SQL Server 
-                        </Typography>
-                    </CardContent>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                        <GitHubIcon />
-                        </IconButton>
-                        
-                    </CardActions>
-                </Card>
-                <Card className={classes.root}>
-                    
-                    <CardMedia
-                        
-                        component="img"
-                        src={'https://media.giphy.com/media/YqnXaLTb68GAJ8ZHFR/giphy.gif'}
-                        height={200}
-                        title="Placeholder Gif"
-                    />
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            An expense tracker built with Blazor Web Assembly, .NET 5 Web Api, 
-                            and Microsoft SQL Server 
-                        </Typography>
-                    </CardContent>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                        <GitHubIcon />
-                        </IconButton>
-                        
-                    </CardActions>
-                </Card>
-                </Grid>
+               
+        <Grid container /* justifyContent="space-evenly" */ >
+            {
+                projectCardListData.map(projCard =>
+                {
+                    return(
+                            <Card key={projCard.id} className={classes.card}>               
+                            <CardMedia
+                                //className={classes.media} 
+                                component="img"
+                                image={projCard.imageSrc}
+                                height={325}
+                                /* width={100} */
+                                title={projCard.title}
+                            />
+                            <CardContent>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    {projCard.description}
+                                </Typography>
+                            </CardContent>
+                            <CardActions disableSpacing>
+                                <IconButton aria-label="add to favorites">
+                                <FavoriteIcon />
+                                </IconButton>
+                                <Tooltip 
+                                interactive
+                                arrow 
+                                title='Project GitHub' 
+                                TransitionComponent={Zoom}>
+                                <IconButton 
+                                className={classes.cardGitHubButtonColor} 
+                                href={projCard.gitHubLink}
+                                aria-label="share"
+                                >
+                                    <GitHubIcon fontSize="large" />
+                                </IconButton>
+                            </Tooltip>
+                                
+                            </CardActions>
+                            </Card>
                 
+                    );
+                })
+            }
+                
+                
+               
+                
+                </Grid>
             </Grid>
         </Html>
         </group> 

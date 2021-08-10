@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
   {
     /* margin: "0 auto", */
     paddingTop: '2em',
-    width: "55%",
+    width: "65%",
     paddingLeft: "6rem",
     /* paddingRight: "3rem" */
-    maxWidth:"55%",
+    maxWidth:"65%",
     height: "70%",
      justifyItems: "left" 
   }, 
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   {
       width: "100%"
   },
-  cardButtonColor:
+  cardGitHubButtonColor:
   {
       color: "#000000"
   },
@@ -168,7 +168,7 @@ const Earth3dScene = props =>
                                 title='My Github Profile' 
                                 TransitionComponent={Zoom}>
                                 <IconButton 
-                                className={classes.cardButtonColor} 
+                                className={classes.cardGitHubButtonColor} 
                                 aria-label="share"
                                 href="https://github.com/sejogit28"
                                 >

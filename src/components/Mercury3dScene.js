@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) =>({
   },
   htmlContainer:
   {
-    width: "65%",
-    maxWidth:"65%",
+    width: "80%",
+    maxWidth:"80%",
     height: "80%",
-    paddingLeft: "2em"
+    paddingLeft: "3em"
     /* justifyItems: "center" */
   },
    root: {
@@ -76,7 +76,7 @@ const Mercury3dScene = props =>
     return (
         <>     
         <Section factor={1.5} offset={1}>
-        <group position={[0,-22,0]}> 
+        <group position={[0,-24,0]}> 
         <pointLight 
         color="#f6f3ea"
         position={[-165, 0, 10]}
@@ -101,11 +101,11 @@ const Mercury3dScene = props =>
         <Html portal={props.domContent} fullscreen>
             <Grid container alignItems="center"  justifyContent="space-evenly" className={classes.htmlContainer} >
                 <Grid item xs={12}>
-                    <Typography align='center' gutterBottom className={classes.whiteFont} variant='h2'>
-                        My Skills
+                    <Typography align='left' gutterBottom className={classes.whiteFont} variant='h2'>
+                        My Skills:
                     </Typography>
                 </Grid>
-                <Grid container justifyContent="space-evenly" >
+                <Grid container /* justifyContent="space-evenly" */ >
 
                     <div className={classes.root}>
                         <ImageList rowHeight={220} className={classes.imageList}>
