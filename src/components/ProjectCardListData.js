@@ -5,7 +5,7 @@ const projectCardListData = [
         title:"Bug Track",
         imageSrc:"/Photos/BugTrackerGif.gif",
         description: "A bug Tracker built using .NET 5(MVC), Entity Framework, Bootstrap and Microsoft SQL Server ",
-        liveLink:"",
+        liveLink:"https://the-bug-track.azurewebsites.net/",
         gitHubLink: "https://github.com/sejogit28/BugTrackerTime2Sol"
         
     },

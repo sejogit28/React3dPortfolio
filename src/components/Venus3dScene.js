@@ -153,19 +153,39 @@ const Venus3dScene = props =>
                                 </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                                <Tooltip 
-                                interactive
-                                arrow 
-                                title='Live link coming soon' 
-                                TransitionComponent={Zoom}>
-                                <IconButton 
-                                className={classes.cardGitHubButtonColor} 
-                                href='#'
-                                aria-label="share"
-                                >
-                                    <LinkIcon fontSize="large" />
-                                </IconButton>
-                            </Tooltip>
+                                {
+                                    projCard.liveLink ?
+
+                                        <Tooltip 
+                                            interactive
+                                            arrow 
+                                            title={projCard.title}
+                                            TransitionComponent={Zoom}>
+                                            <IconButton 
+                                            className={classes.cardGitHubButtonColor} 
+                                            href={projCard.liveLink}
+                                            aria-label="share"
+                                        >
+                                            <LinkIcon fontSize="large" />
+                                            </IconButton>
+                                        </Tooltip>
+
+
+                                    :
+                                        <Tooltip 
+                                            interactive
+                                            arrow 
+                                            title='Live link coming soon' 
+                                            TransitionComponent={Zoom}>
+                                            <IconButton 
+                                            className={classes.cardGitHubButtonColor} 
+                                            href='#'
+                                            aria-label="share"
+                                        >
+                                            <LinkIcon fontSize="large" />
+                                            </IconButton>
+                                        </Tooltip>
+                                }
                                 <Tooltip 
                                 interactive
                                 arrow 

@@ -13,7 +13,7 @@ import {makeStyles} from '@material-ui/core/styles';
 
 
 import {Canvas} from "@react-three/fiber";
-
+import { Html,useProgress } from '@react-three/drei';
 
 const useStyles = makeStyles((theme) => ({
   canvasContainer:
@@ -58,7 +58,7 @@ function App() {
     width: window.innerWidth
   })
 
-  useEffect(()=> void handleScroll({target: scrollArea.current}), )
+  useEffect(()=> void handleScroll({target: scrollArea.current}), [])
   useEffect(() => 
   {
     
@@ -74,8 +74,13 @@ function App() {
       window.addEventListener('resize', handleResize)
     
     
-  }, /* [dimensions.height, dimensions.width] */)
+  }, /* [dimensions.height, dimensions.width] */[])
   
+  function Loader() {
+  const { active, progress, errors, item, loaded, total } = useProgress()
+  return <Html center>{progress} % loaded</Html>
+}
+
   return (
     <div className={classes.canvasContainer}>
       <Canvas concurrent>      
@@ -99,9 +104,9 @@ function App() {
               overflow: "auto"
             }
           } 
-          className={classes.scrollArea} 
-          ref={scrollArea} 
-          onScroll={handleScroll}
+        className={classes.scrollArea} 
+        ref={scrollArea} 
+        onScroll={handleScroll}
           >
             
           <div className={classes.domContentDiv} ref={domContent}/>
