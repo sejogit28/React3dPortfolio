@@ -13,7 +13,7 @@ import {makeStyles} from '@material-ui/core/styles';
 
 
 import {Canvas} from "@react-three/fiber";
-import { Html,useProgress } from '@react-three/drei';
+//import { Html,useProgress } from '@react-three/drei';
 
 const useStyles = makeStyles((theme) => ({
   canvasContainer:
@@ -76,10 +76,10 @@ function App() {
     
   }, /* [dimensions.height, dimensions.width] */[])
   
-  function Loader() {
+/*   function Loader() {
   const { active, progress, errors, item, loaded, total } = useProgress()
-  return <Html center>{progress} % loaded</Html>
-}
+  return <Html center>{progress} % loaded</Html> 
+}*/
 
   return (
     <div className={classes.canvasContainer}>
