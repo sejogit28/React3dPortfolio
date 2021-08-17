@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   domContentDiv:
   {
-    position:"auto",
+    position:"sticky",
     top: 0
   },
   pageHeight: 
