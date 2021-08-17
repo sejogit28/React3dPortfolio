@@ -72,7 +72,7 @@ const Mercury3dScene = props =>
         mercuryRef.current.rotation.y = elaspedTime/10;
         mercuryRef.current.position.x = 4; 
     })
-
+         
     return (
         <>     
         <Section factor={1.5} offset={1}>

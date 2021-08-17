@@ -7,7 +7,7 @@ import Venus3dScene from './components/Venus3dScene';
 import Mercury3dScene from './components/Mercury3dScene';
 import SpaceShipScene from './components/SpaceshipScene';
 import UfoScene from './components/UfoScene';
-
+import ContactForm from './components/ContactForm';
 
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   domContentDiv:
   {
-    position: "sticky",
+    position:"auto",
     top: 0
   },
   pageHeight: 
@@ -88,6 +88,7 @@ function App() {
           <Earth3dScene domContent={domContent}/>
           <Venus3dScene domContent={domContent}/>       
           <Mercury3dScene domContent={domContent}/>
+          <ContactForm domContent={domContent}/> 
           <SpaceShipScene domContent={domContent}/>
           <UfoScene/>
         </Suspense>
