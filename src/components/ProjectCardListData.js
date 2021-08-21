@@ -19,7 +19,7 @@ const projectCardListData = [
     },
     {
         id: 3,
-        title:" Program Your Mind",
+        title:"Coding Mind",
         imageSrc:"/Photos/MernBlogGif.gif",
         description: "A personal blog application built using the MERN(MongoDb, Express, React and Node).",
         liveLink:"https://fervent-darwin-5bcd5e.netlify.app/",
