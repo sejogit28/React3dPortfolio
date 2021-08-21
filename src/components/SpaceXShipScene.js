@@ -51,4 +51,4 @@ export default function SpaceXShipScene(props) {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('/models/spaceXShipModel/scene.gltf')

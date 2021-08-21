@@ -37,4 +37,4 @@ export default function SpaceshipScene(props) {
   )
 }
 
-useGLTF.preload('models/spaceshipModel/scene.gltf')
+useGLTF.preload('/models/spaceshipModel/scene.gltf')
