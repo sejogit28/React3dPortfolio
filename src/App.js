@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
   },
   pageHeight: 
   {
-    height: `${state.pages * 100}vh`
+    height: `${state.pages * 100}vh`,
+    width: 'auto'
   },
   exampleWrapper: {
     position: 'relative',
