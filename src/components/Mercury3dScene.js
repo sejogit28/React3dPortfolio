@@ -13,7 +13,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import {makeStyles} from '@material-ui/core/styles';
 
 import {useFrame, useLoader} from "@react-three/fiber";
-import{OrbitControls, Html, Stars} from '@react-three/drei';
+import{/* OrbitControls, */ Html, Stars} from '@react-three/drei';
 import {TextureLoader} from 'three';
 //import * as THREE from 'three';
 
@@ -95,7 +95,7 @@ const Mercury3dScene = props =>
             <sphereGeometry args={[1.3, 32, 32]}/>
             <meshPhongMaterial />
             <meshStandardMaterial map={colorMap}/>
-            <OrbitControls enablePan={true} />
+            {/* <OrbitControls enablePan={true} /> */}
         </mesh>
 
         <Html portal={props.domContent} fullscreen>

@@ -14,7 +14,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 import {useFrame, useLoader} from "@react-three/fiber";
-import{OrbitControls, Html, Stars} from '@react-three/drei';
+import{/* OrbitControls, */ Html, Stars} from '@react-three/drei';
 import * as THREE from 'three';
 import {TextureLoader} from 'three';
 
@@ -114,7 +114,7 @@ const Earth3dScene = props =>
             <sphereGeometry args={[3, 32, 32]}/>
             <meshPhongMaterial specularMap={specularMap}/>
             <meshStandardMaterial map={colorMap} normalMap={normalMap}/>
-            <OrbitControls enablePan={true}/>
+           {/*  <OrbitControls enablePan={true}/> */}
         </mesh>
         <Html fullscreen portal={props.domContent} >
             <Grid container  alignItems="center" className={classes.htmlContainer}>                   

@@ -13,7 +13,7 @@ import LinkIcon from '@material-ui/icons/Link';
 import {makeStyles} from '@material-ui/core/styles';
 
 import {useFrame, useLoader} from "@react-three/fiber";
-import{OrbitControls, Html, Stars} from '@react-three/drei';
+import{/* OrbitControls, */ Html, Stars} from '@react-three/drei';
 import {TextureLoader} from 'three';
 import * as THREE from 'three';
 
@@ -121,7 +121,7 @@ const Venus3dScene = props =>
             <sphereGeometry args={[2.8, 32, 32]}/>
             <meshPhongMaterial />
             <meshStandardMaterial map={colorMap}/>
-            <OrbitControls enablePan={true} />
+           {/*  <OrbitControls enablePan={true} /> */}
         </mesh>
         <SpaceXShipScene/>
         <MaintenanceRobotScene/>
