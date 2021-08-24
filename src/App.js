@@ -19,17 +19,20 @@ const useStyles = makeStyles((theme) => ({
   canvasContainer:
   {
     width: "100%",
-    height: "50em"
+    height: "100vh",
+    
+    margin: 0
   },
   domContentDiv:
   {
     position:"sticky",
+    
     top: 0
   },
   pageHeight: 
   {
     height: `${state.pages * 100}vh`,
-    width: 'auto'
+    width: '100%'
   },
   exampleWrapper: {
     position: 'relative',
