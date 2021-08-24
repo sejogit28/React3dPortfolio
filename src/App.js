@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
   domContentDiv:
   {
     position:"sticky",
-    
+     width: "100%",
+    height: "100%",
     top: 0
   },
   pageHeight: 
@@ -109,7 +110,7 @@ function App() {
               overflow: "auto"
             }
           } 
-        className={classes.scrollArea} 
+        /* className={classes.scrollArea}  */
         ref={scrollArea} 
         onScroll={handleScroll}
           >
