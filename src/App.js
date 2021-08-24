@@ -20,14 +20,13 @@ const useStyles = makeStyles((theme) => ({
   {
     width: "100%",
     height: "100%",
-    
+   overflow:"auto",
     margin: 0
   },
   domContentDiv:
   {
     position:"sticky",
-     width: "100%",
-    height: "100%",
+    
     top: 0
   },
   pageHeight: 
