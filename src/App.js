@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   {
     width: "100%",
     height: "100%",
-   overflow:"auto",
+   overflow:"hidden",
     margin: 0
   },
   domContentDiv:
