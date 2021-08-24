@@ -4,7 +4,7 @@ const projectCardListData = [
         id: 1,
         title:"Bug Track",
         imageSrc:"/Photos/BugTrackerGif.gif",
-        description: "A bug Tracker built using .NET 5(MVC), Entity Framework, Bootstrap and Microsoft SQL Server ",
+        description: "A bug Tracker built using .NET 5(MVC), Entity Framework, Bootstrap and Microsoft SQL Server",
         liveLink:"https://the-bug-track.azurewebsites.net/",
         gitHubLink: "https://github.com/sejogit28/BugTrackerTime2Sol"
         
@@ -13,8 +13,8 @@ const projectCardListData = [
         id: 2 ,
         title:"Expense Track",
         imageSrc:"/Photos/ExpenseTrackerGif.gif",
-        description: "An expense tracker built with Blazor Web Assembly, .NET 5 Web Api, and Microsoft SQL Server ",
-        liveLink:"",
+        description: "An expense tracker built with Blazor Web Assembly, .NET 5 Web Api, and Microsoft SQL Server",
+        liveLink:"https://exptrackerwasmclient20210823222931.azurewebsites.net",
         gitHubLink: "https://github.com/sejogit28/ExpenseTrackerSol"
     },
     {
