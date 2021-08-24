@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   canvasContainer:
   {
     width: "100%",
-    height: "600px"
+    height: "50em"
   },
   domContentDiv:
   {
