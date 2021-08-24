@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   {
     width: "100%",
     height: "100%",
+    //The overflow, position and margin were neede to fix the screen on mobile
     overflow:"hidden",
     position: "fixed",
     margin: 0
