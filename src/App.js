@@ -66,15 +66,15 @@ function App() {
     {
       setDimensions({
         height: window.outerHeight,
-        width: window.innerWidth
+        width: window.outerWidth
       })
     
     }
     
       window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
     
-    
-  }, /* [dimensions.height, dimensions.width] */[])
+  }, /* [dimensions.height, dimensions.width] */)
   
 /*   function Loader() {
   const { active, progress, errors, item, loaded, total } = useProgress()
