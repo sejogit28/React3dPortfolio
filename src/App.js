@@ -13,7 +13,8 @@ import {makeStyles} from '@material-ui/core/styles';
 
 
 import {Canvas} from "@react-three/fiber";
-//import { Html,useProgress } from '@react-three/drei';
+import { useProgress } from '@react-three/drei';
+import { a, useTransition } from 'react-spring'
 
 const useStyles = makeStyles((theme) => ({
   canvasContainer:
@@ -36,18 +37,45 @@ const useStyles = makeStyles((theme) => ({
     height: `${state.pages * 100}vh`,
     width: '100%'
   },
-  exampleWrapper: {
+  exampleWrapper: 
+  {
     position: 'relative',
     marginTop: theme.spacing(3),
     height: 900,
   },
-  speedDial: {
+  speedDial: 
+  {
     position: 'absolute',
       bottom: theme.spacing(2),
     
       left: theme.spacing(2),
     
   },
+  loading:
+  {
+    position: 'absolute',
+    top: '0px',
+    left: '0px',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#171717',
+    display:'flex',
+    justifyItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000
+  },
+  loadingBar:
+  {
+    height: '32px',
+    backgroundColor: '#0276FD'
+  },
+  loadingBarContainer: 
+  {
+    width: '100px',
+    height: '32px',
+    backgroundColor: '#272727'
+  }
 }))
 
 
@@ -86,7 +114,25 @@ function App() {
   const { active, progress, errors, item, loaded, total } = useProgress()
   return <Html center>{progress} % loaded</Html> 
 }*/
+function Loader() {
 
+  const { active, progress } = useProgress();
+  const transition = useTransition(active, {
+    from: { opacity: 1, progress: 0 },
+    leave: { opacity: 0 },
+    update: { progress },
+  });
+  return transition(
+    ({ progress, opacity }, active) =>
+      active && (
+        <a.div className={classes.loading} style={{ opacity }}>
+          <div className={classes.loadingBarContainer}>
+            <a.div className={classes.loadingBar} style={{ width: progress }}></a.div>
+          </div>
+        </a.div>
+      )
+  );
+}
   return (
     <div className={classes.canvasContainer}>
       <Canvas concurrent>      
@@ -98,7 +144,8 @@ function App() {
           <SpaceShipScene domContent={domContent}/>
           <UfoScene/>
         </Suspense>
-      </Canvas>  
+      </Canvas>
+      <Loader/>  
       <div 
         style=
           {
