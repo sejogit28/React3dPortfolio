@@ -126,7 +126,7 @@ const Mercury3dScene = props =>
                                 title: classes.title,
                                  }}
                                 actionIcon={
-                                    <Tooltip title={item.title} arrow disableTouchListener>
+                                    <Tooltip title={item.title} arrow>
                                     <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
                                     <InfoIcon htmlColor='white'/>
                                     </IconButton>
