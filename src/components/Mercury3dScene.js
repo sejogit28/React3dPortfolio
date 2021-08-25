@@ -104,6 +104,9 @@ const Mercury3dScene = props =>
                     <Typography align='left' gutterBottom className={classes.whiteFont} variant='h2'>
                         My Skills:
                     </Typography>
+                    <Typography align='left' gutterBottom className={classes.whiteFont} variant='caption'>
+                        On mobile? Hold down on the "i" icon for a description
+                    </Typography>
                 </Grid>
                 <Grid container /* justifyContent="space-evenly" */ >
 
@@ -123,7 +126,7 @@ const Mercury3dScene = props =>
                                 title: classes.title,
                                  }}
                                 actionIcon={
-                                    <Tooltip title={item.title} arrow>
+                                    <Tooltip title={item.title} arrow disableTouchListener>
                                     <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
                                     <InfoIcon htmlColor='white'/>
                                     </IconButton>
