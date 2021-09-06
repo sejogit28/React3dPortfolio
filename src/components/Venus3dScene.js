@@ -45,7 +45,7 @@ const useStyles = makeStyles({
   card: 
   {
     maxHeight: "35em",
-    maxWidth: "32rem",
+    maxWidth: "31rem",
     marginBottom: "5em"
   },
   
@@ -141,10 +141,9 @@ const Venus3dScene = props =>
                             <Card key={projCard.id} className={classes.card}>               
                             <CardMedia
                                 //className={classes.media} 
-                                component="img"
-                                image={projCard.imageSrc}
-                                height={325}
-                               
+                                component="iframe"
+                                src={projCard.imageSrc}
+                                height={325}                            
                                 title={projCard.title}
                             />
                             <CardContent>
