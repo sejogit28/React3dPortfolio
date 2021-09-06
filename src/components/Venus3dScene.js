@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     maxWidth:"80%",
     height: "80%",
     paddingLeft: "3em" ,
-    paddingRight: "32em" ,
+    /* paddingRight: "30em" , */
     /* justifyItems: "left"  */
   },
   card: 
