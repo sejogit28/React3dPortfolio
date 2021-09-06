@@ -152,7 +152,7 @@ const Earth3dScene = props =>
                             <Tooltip 
                                 interactive
                                 arrow 
-                                title='My LinkedIn Profile' 
+                                title='My LinkedIn Profile, send me a message!' 
                                 TransitionComponent={Zoom}>
                                 <IconButton 
                                 color="primary" 
