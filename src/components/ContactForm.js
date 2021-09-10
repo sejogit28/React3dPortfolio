@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     width: "90%",
     maxWidth:"90%",
     height: "80%",
-    paddingLeft: "3em" ,
+    paddingLeft: "2em" ,
     /* justifyItems: "left"  */
   },
   contactFormGrid:

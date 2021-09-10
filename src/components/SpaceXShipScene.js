@@ -15,7 +15,7 @@ export default function SpaceXShipScene(props) {
   //const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
-      <group position={[4,-15,0]} rotation={[-Math.PI / 2, 0, 0]}>
+      <group position={[5,-15,0]} rotation={[-Math.PI / 2, 0, 0]}>
         <group scale={.8}>
           <group rotation={[Math.PI / 2, 0, 0]}>
             <group position={[1.09, 1.51, 0]}>

@@ -109,7 +109,7 @@ const Venus3dScene = props =>
           fade={true}
           /> 
         <mesh ref={venusAtmosphereRef} position={[0,0,0]}>
-            <sphereGeometry args={[2.805, 32, 32]} />
+            <sphereGeometry args={[2.405, 32, 32]} />
             <meshPhongMaterial
              map={atmosphereMap}
              opacity={1}
@@ -119,7 +119,7 @@ const Venus3dScene = props =>
              />
         </mesh>  
         <mesh ref={venusRef} position={[0,0,0]}>
-            <sphereGeometry args={[2.8, 32, 32]}/>
+            <sphereGeometry args={[2.4, 32, 32]}/>
             <meshPhongMaterial />
             <meshStandardMaterial map={colorMap}/>
            {/*  <OrbitControls enablePan={true} /> */}

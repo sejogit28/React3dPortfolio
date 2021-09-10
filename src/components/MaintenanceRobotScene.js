@@ -16,7 +16,7 @@ export default function MaintenanceRobotScene(props) {
   const { nodes, materials } = useGLTF('/models/maintenanceRobotModel/scene.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
-      <group ref={group2}  position={[3,-10,-2]}rotation={[-Math.PI / 2, 0, 0]}>
+      <group ref={group2}  position={[4,-10,-2]}rotation={[-Math.PI / 2, 0, 0]}>
         <mesh geometry={nodes.mesh_0.geometry} material={materials['defaultMat.001']} />
       </group>
     </group>

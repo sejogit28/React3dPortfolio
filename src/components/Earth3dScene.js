@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
   {
     /* margin: "0 auto", */
     paddingTop: '2em',
-    width: "65%",
-    paddingLeft: "6rem",
+    width: "85%",
+    paddingLeft: "4rem",
     /* paddingRight: "3rem" */
-    maxWidth:"65%",
+    maxWidth:"85%",
     height: "70%",
      justifyItems: "left" 
   }, 
@@ -101,7 +101,7 @@ const Earth3dScene = props =>
           fade={true}
           /> 
         <mesh ref={cloudsRef} position={[0,0,0]}>
-            <sphereGeometry args={[3.005, 32, 32]} />
+            <sphereGeometry args={[2.605, 32, 32]} />
             <meshPhongMaterial
              map={cloudsMap}
              opacity={.5}
@@ -111,7 +111,7 @@ const Earth3dScene = props =>
              />
         </mesh>
         <mesh ref={earthRef} position={[0,0,0]}>
-            <sphereGeometry args={[3, 32, 32]}/>
+            <sphereGeometry args={[2.6, 32, 32]}/>
             <meshPhongMaterial specularMap={specularMap}/>
             <meshStandardMaterial map={colorMap} normalMap={normalMap}/>
            {/*  <OrbitControls enablePan={true}/> */}
