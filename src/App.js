@@ -24,13 +24,16 @@ const useStyles = makeStyles((theme) => ({
     //The overflow, position and margin were neede to fix the screen on mobile
     overflow:"hidden",
     position: "fixed",
-    margin: 0
+    margin: 0,
+    
+
   },
   domContentDiv:
   {
     position:"sticky",
     
-    top: 0
+    top: 0,
+    
   },
   pageHeight: 
   {
@@ -155,7 +158,8 @@ function Loader() {
               left: 0,
               width: /* `${208}vh` */dimensions.width,
               height: /* `${100}vh` */ dimensions.height,
-              overflow: "auto"
+              overflow: "auto",
+              
             }
           } 
         /* className={classes.scrollArea}  */

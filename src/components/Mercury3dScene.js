@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) =>({
   imageList: {
     width: 500,
     height: 450,
+    '&::-webkit-scrollbar': {
+    width: '0em'
+  }
   },
   titleBar: {
     background:
