@@ -25,8 +25,8 @@ const useStyles = makeStyles({
   },
   htmlContainer:
   {
-    width: "80%",
-    maxWidth:"80%",
+    width: "100%",
+    maxWidth:"100%",
     height: "80%",
     paddingLeft: "3em" ,
     /* justifyItems: "left"  */
@@ -78,11 +78,11 @@ const ContactForm = props => {
         <Html portal={props.domContent} fullscreen>
             <Grid container alignItems="center"  justifyContent="space-evenly" className={classes.htmlContainer} >
                 <Grid item xs={12}>
-                    <Typography align='left' gutterBottom className={classes.whiteFont} variant='h2'>
+                    <Typography align='center' gutterBottom className={classes.whiteFont} variant='h2'>
                         Contact Me:
                     </Typography>
                 </Grid>
-                <Grid container /* justifyContent="space-evenly" */  spacing={3} >
+                <Grid container alignItems="center" justifyContent="space-evenly"  spacing={3} >
                    <Paper elevation={3} className={classes.contactFormGrid}>
                     <form action="https://formsubmit.co/6c3b1eb7d56edb5c1551bc6d6e45f59a" method="POST">
                         <Grid  className={classes.marginBottom} item xs='auto'>
