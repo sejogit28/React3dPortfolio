@@ -25,8 +25,8 @@ const useStyles = makeStyles({
   },
   htmlContainer:
   {
-    width: "100%",
-    maxWidth:"100%",
+    width: "90%",
+    maxWidth:"90%",
     height: "80%",
     paddingLeft: "3em" ,
     /* justifyItems: "left"  */
