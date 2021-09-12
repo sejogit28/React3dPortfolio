@@ -139,6 +139,7 @@ const Venus3dScene = props =>
                 projectCardListData.map(projCard =>
                 {
                     return(
+                        < Grid container item xs={12} spacing={3}>
                             <Card key={projCard.id} className={classes.card}>               
                             <CardMedia
                                 //className={classes.media} 
@@ -202,7 +203,7 @@ const Venus3dScene = props =>
                                 
                             </CardActions>
                             </Card>
-                
+                        </ Grid >
                     );
                 })
             }

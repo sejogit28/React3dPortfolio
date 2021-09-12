@@ -118,7 +118,7 @@ const Earth3dScene = props =>
         </mesh>
         <Html fullscreen portal={props.domContent} >
             <Grid container  alignItems="center" className={classes.htmlContainer}>                   
-                <Grid item xs={12}>
+                <Grid containeritem xs={12}>
 
                 <Card className={classes.root}>
                     <CardActionArea>
