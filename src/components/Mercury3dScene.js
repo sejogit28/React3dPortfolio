@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) =>({
   },
   htmlContainer:
   {
-    width: "80%",
-    maxWidth:"80%",
+    width: "95%",
+    maxWidth:"95%",
     height: "80%",
-    paddingLeft: "3em"
+    paddingLeft: "2em"
     /* justifyItems: "center" */
   },
    root: {
