@@ -1,13 +1,14 @@
-import React, {useEffect, useState, useRef, Suspense} from 'react';
+import React, {useEffect, useState, useRef, Suspense, lazy} from 'react';
 
 import state from './components/State';
 
-import Earth3dScene from './components/Earth3dScene';
-import Venus3dScene from './components/Venus3dScene';
-import Mercury3dScene from './components/Mercury3dScene';
-import SpaceShipScene from './components/SpaceshipScene';
-import UfoScene from './components/UfoScene';
-import ContactForm from './components/ContactForm';
+
+//import Earth3dScene from './components/Earth3dScene';
+//import Venus3dScene from './components/Venus3dScene';
+// import Mercury3dScene from './components/Mercury3dScene';
+// import SpaceShipScene from './components/SpaceshipScene';
+// import UfoScene from './components/UfoScene';
+// import ContactForm from './components/ContactForm';
 
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -15,6 +16,14 @@ import {makeStyles} from '@material-ui/core/styles';
 import {Canvas} from "@react-three/fiber";
 import { useProgress } from '@react-three/drei';
 import { a, useTransition } from 'react-spring'
+
+const Earth3dScene = lazy(()=> import('./components/Earth3dScene'));
+const Venus3dScene = lazy(()=> import('./components/Venus3dScene'));
+const Mercury3dScene = lazy(()=> import('./components/Mercury3dScene'));
+const SpaceshipScene = lazy(()=> import('./components/SpaceshipScene'));
+const UfoScene = lazy(()=> import('./components/UfoScene'));
+const ContactForm = lazy(()=> import('./components/ContactForm'));
+
 
 const useStyles = makeStyles((theme) => ({
   canvasContainer:
@@ -144,7 +153,7 @@ function Loader() {
           <Venus3dScene domContent={domContent}/>       
           <Mercury3dScene domContent={domContent}/>
           <ContactForm domContent={domContent}/> 
-          <SpaceShipScene domContent={domContent}/>
+          <SpaceshipScene domContent={domContent}/>
           <UfoScene/>
         </Suspense>
       </Canvas>
