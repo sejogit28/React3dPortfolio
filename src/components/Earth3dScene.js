@@ -10,6 +10,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 //import DescriptionIcon from '@material-ui/icons/Description';
 
 
@@ -25,6 +26,8 @@ import Earth3dDayMap from "../textures/8k_earth_daymap.jpg";
 import Earth3dNormalMap from "../textures/8k_earth_normal_map.jpg";
 import Earth3dSpecularMap from "../textures/8k_earth_specular_map.jpg";
 import Earth3dCloudsMap from "../textures/8k_earth_clouds.jpg";
+
+//import SeanJosephFullStackDeveloper2021Resume from "/Resume/SeanJosephFullStackDeveloper2021Resume.docx";
 
 const useStyles = makeStyles((theme) => ({
   root:
@@ -173,6 +176,21 @@ const Earth3dScene = props =>
                                 href="https://github.com/sejogit28"
                                 >
                                     <GitHubIcon fontSize="large" />
+                                </IconButton>
+
+                            </Tooltip>
+                            <Tooltip 
+                                interactive
+                                arrow 
+                                title='My updated resume' 
+                                TransitionComponent={Zoom}>
+                                <IconButton 
+                                className={classes.cardGitHubButtonColor} 
+                                aria-label="share"
+                                href="/Resume/SeanJosephFullStackDeveloper2021Resume.docx"
+                                download="SeanJosephResume2021"
+                                >
+                                    <CloudDownloadIcon fontSize="large" />
                                 </IconButton>
 
                             </Tooltip>
